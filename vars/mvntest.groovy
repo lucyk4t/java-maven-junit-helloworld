@@ -18,7 +18,8 @@ def call() {
             sh 'echo $JAVA_HOME'
             sh 'javac -version'
             sh 'mvn --version'
-            sh "mvn clean ${params.testType} -Dmaven.test.failure.ignore=true"
+            // sh "mvn clean ${params.testType} -Dmaven.test.failure.ignore=true"
+            sh 'mvn clean test'
         }
     }
 
